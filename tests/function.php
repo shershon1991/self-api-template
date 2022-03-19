@@ -5,27 +5,30 @@ namespace Wm\Common\Util;
 use DI\ContainerBuilder;
 use function DI\get;
 
-function container(){
+function container()
+{
     static $container = null;
-    if (empty($container)){
+    if (empty($container)) {
         $container = ContainerBuilder::buildDevContainer();
         $list = Support::listDefaultDependent();
-        array_map(function ($key, $value) use ($container){
+        array_map(function ($key, $value) use ($container) {
             $container->set($key, get($value));
         }, array_keys($list), array_values($list));
     }
     return $container;
 }
 
-function config($name, $default = null){
+function config($name, $default = null)
+{
     static $cfg;
-    if (is_null($cfg)){
+    if (is_null($cfg)) {
         $cfg = initConfig();
     }
     return data_get($cfg, $name, $default);
 }
 
-function initConfig(){
+function initConfig()
+{
     return [
         'api' => [
             'course_center' => [

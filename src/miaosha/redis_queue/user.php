@@ -11,7 +11,7 @@ for ($i = 0; $i < 100; $i++) {
     $uid = rand(10000, 99999);
     $num = 10;
 
-    if ($redis->lLen($redis_name) < 10) {
+    if ($redis->lLen($redis_name) < $num) {
         $redis->rPush($redis_name, $uid . '%' . time());
         echo $uid . '-秒杀成功<br>';
     } else {

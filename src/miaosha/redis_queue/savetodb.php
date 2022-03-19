@@ -15,7 +15,7 @@ while (1) {
 
     if (!$user || $user == 'nil') {
         sleep(2);
-        continue;
+        break;
     }
 
     $user_arr = explode('%', $user);
