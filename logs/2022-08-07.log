@@ -2,3 +2,5 @@
 [2022-08-07T04:51:37.123927+00:00] name.ERROR: This is a error record. [] []
 [2022-08-07T04:56:24.226734+00:00] name.WARNING: This is a warning record. [] []
 [2022-08-07T04:56:24.229567+00:00] name.ERROR: This is a error record. [] []
+[2022-08-07T04:59:06.436193+00:00] name.WARNING: This is a warning record. [] []
+[2022-08-07T04:59:06.438215+00:00] name.ERROR: This is a error record. [] []
