@@ -8,10 +8,8 @@ use Monolog\Logger;
 
 class LogTest extends AbstractTestCase
 {
-
     public function testLog()
     {
-        //die('fk');
         $log = new Logger('name');
         $logPath = '/Users/shershon/ProjectItem/PhpItem/php-study-example/logs/' . date('Y-m-d') . '.log';
         $log->pushHandler(new StreamHandler($logPath, Logger::WARNING));
