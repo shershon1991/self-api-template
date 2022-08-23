@@ -14,7 +14,7 @@ namespace Prophecy\Comparator;
 use SebastianBergmann\Comparator\Factory as BaseFactory;
 
 /**
- * Prophecy comparator factory.
+ * Prophecy comparator Factory.
  *
  * @author Konstantin Kudryashov <ever.zet@gmail.com>
  */

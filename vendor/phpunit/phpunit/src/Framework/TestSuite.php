@@ -483,7 +483,7 @@ class TestSuite implements IteratorAggregate, SelfDescribing, Test
     }
 
     /**
-     * Counts the number of test cases that will be run by this test.
+     * Counts the number of test Cases that will be run by this test.
      */
     public function count(bool $preferCache = false): int
     {

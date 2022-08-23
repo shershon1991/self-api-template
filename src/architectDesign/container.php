@@ -87,9 +87,9 @@ class Container
 }
 
 require_once "./testclass.php"; //开始测试，先测试已知依赖关系的情况
-$c = new Container();
+$c             = new Container();
 $c->department = 'Department';
-$c->company = function ($c) {
+$c->company    = function ($c) {
     return new Company($c->department);
 };
 // 从容器中取得company
@@ -97,8 +97,8 @@ $company = $c->company;
 $company->doSomething(); //输出: Group:hello|Department:hello|Company:hello|
 echo PHP_EOL;
 // 测试未知依赖关系，直接使用的方法
-$di = new Container();
+$di          = new Container();
 $di->company = 'Company';
-$company = $di->company;
+$company     = $di->company;
 $company->doSomething();//输出: Group:hello|Department:hello|Company:hello|
 echo PHP_EOL;

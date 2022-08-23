@@ -19,7 +19,7 @@ use phpDocumentor\Reflection\Types\Context as TypeContext;
 interface TagFactory
 {
     /**
-     * Adds a parameter to the service locator that can be injected in a tag's factory method.
+     * Adds a parameter to the service locator that can be injected in a tag's Factory method.
      *
      * When calling a tag's "create" method we always check the signature for dependencies to inject. One way is to
      * typehint a parameter in the signature so that we can use that interface or class name to inject a dependency

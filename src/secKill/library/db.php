@@ -1,6 +1,5 @@
 <?php
 
-
 class DB
 {
     static public $_instance = NULL;
@@ -13,12 +12,12 @@ class DB
 
     private function __construct()
     {
-        $this->host = "mysql";
-        $this->port = 3306;
-        $this->user = "root";
+        $this->host     = "mysql";
+        $this->port     = 3306;
+        $this->user     = "root";
         $this->password = "root";
-        $this->db = "test";
-        $this->charset = "utf-8";
+        $this->db       = "test";
+        $this->charset  = "utf-8";
     }
 
     //连接数据库
@@ -38,8 +37,3 @@ class DB
         return $conn;
     }
 }
-
-/*$obj = DB::getInstance();
-var_dump($obj->connect());
-$conn = $obj->connect();
-var_dump($conn);*/

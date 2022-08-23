@@ -1,21 +1,21 @@
 <?php
 
 session_start();
-$image = imagecreatetruecolor(200, 60);
+$image   = imagecreatetruecolor(200, 60);
 $bgcolor = imagecolorallocate($image, 255, 255, 255);
 imagefill($image, 0, 0, $bgcolor);
 
 //创建汉字验证码
 $fontface = __DIR__ . '/msyhbd.ttf';
-$str = "你要加油你是最棒的努力成为自己心目中的那个人";
-$strdb = str_split($str, 3);
+$str      = "你要加油你是最棒的努力成为自己心目中的那个人";
+$strdb    = str_split($str, 3);
 
 $captch_code = '';
 for ($i = 0; $i < 4; $i++) {
     $fontcolor = imagecolorallocate($image, rand(0, 120), rand(0, 120), rand(0, 120));
 
-    $index = rand(0, count($strdb));
-    $cn = $strdb[$index];
+    $index       = rand(0, count($strdb));
+    $cn          = $strdb[$index];
     $captch_code .= $cn;
 
     imagettftext($image, mt_rand(20, 24), mt_rand(-60, 60), (40 * $i + 20), mt_rand(30, 35), $fontcolor, $fontface, $cn);

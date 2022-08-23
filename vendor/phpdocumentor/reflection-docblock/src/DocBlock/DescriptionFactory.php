@@ -41,7 +41,7 @@ use const PREG_SPLIT_DELIM_CAPTURE;
  * 2. `{}` to escape the `}` character, this can be used if you want to use the `}` character in the description
  *    of an inline tag.
  *
- * If a body consists of multiple lines then this factory will also remove any superfluous whitespace at the beginning
+ * If a body consists of multiple lines then this Factory will also remove any superfluous whitespace at the beginning
  * of each line while maintaining any indentation that is used. This will prevent formatting parsers from tripping
  * over unexpected spaces as can be observed with tag descriptions.
  */
@@ -51,7 +51,7 @@ class DescriptionFactory
     private $tagFactory;
 
     /**
-     * Initializes this factory with the means to construct (inline) tags.
+     * Initializes this Factory with the means to construct (inline) tags.
      */
     public function __construct(TagFactory $tagFactory)
     {

@@ -10,8 +10,8 @@ $table = array(
     'pic4' => '狗',
 );
 
-$index = rand(0, 4);
-$value = $table['pic' . $index];
+$index                = rand(0, 4);
+$value                = $table['pic' . $index];
 $_SESSION['authcode'] = $value;
 
 $filename = __DIR__ . '/pic' . $index . '.jpg';

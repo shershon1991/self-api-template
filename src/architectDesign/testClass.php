@@ -1,4 +1,6 @@
-<?php //依赖关系：Company->Department->Group
+<?php
+
+//依赖关系：Company->Department->Group
 class Group
 {
     public function doSomething()

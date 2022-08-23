@@ -1082,7 +1082,7 @@ final class Configuration
 
     /**
      * if $value is 'false' or 'true', this returns the value that $value represents.
-     * Otherwise, returns $default, which may be a string in rare cases.
+     * Otherwise, returns $default, which may be a string in rare Cases.
      * See PHPUnit\Util\ConfigurationTest::testPHPConfigurationIsReadCorrectly.
      *
      * @param bool|string $default

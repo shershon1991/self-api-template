@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-$image = imagecreatetruecolor(100, 30);
+$image   = imagecreatetruecolor(100, 30);
 $bgcolor = imagecolorallocate($image, 255, 255, 255);
 imagefill($image, 0, 0, $bgcolor);
 
@@ -20,10 +20,10 @@ for($i=0;$i<4;$i++){
 //创建数字、字母验证码
 $captch_code = '';
 for ($i = 0; $i < 4; $i++) {
-    $fontsize = 6;
+    $fontsize  = 6;
     $fontcolor = imagecolorallocate($image, rand(0, 120), rand(0, 120), rand(0, 120));
 
-    $data = 'abcdefghijkmnpqrstuvwxy3456789';
+    $data        = 'abcdefghijkmnpqrstuvwxy3456789';
     $fontcontent = substr($data, rand(0, strlen($data)), 1);
     $captch_code .= $fontcontent;
 

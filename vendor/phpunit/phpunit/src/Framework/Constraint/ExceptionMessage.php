@@ -53,7 +53,7 @@ final class ExceptionMessage extends Constraint
      * Returns the description of the failure.
      *
      * The beginning of failure messages is "Failed asserting that" in most
-     * cases. This method should return the second part of that sentence.
+     * Cases. This method should return the second part of that sentence.
      *
      * @param mixed $other evaluated value or object
      */

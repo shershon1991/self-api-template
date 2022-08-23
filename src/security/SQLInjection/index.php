@@ -3,14 +3,14 @@
  * @date: 2022/3/9
  * @createTime: 6:47 PM
  */
-$host = 'mysql';
+$host   = 'mysql';
 $dbUser = 'root';
-$dbPwd = 'root';
-$db = 'test';
+$dbPwd  = 'root';
+$db     = 'test';
 
 if (!empty($_POST)) {
     $nickName = $_POST['nickname'];
-    $pwd = $_POST['password'];
+    $pwd      = $_POST['password'];
 
     $connect = mysqli_connect($host, $dbUser, $dbPwd);
     mysqli_set_charset($connect, 'UTF-8');

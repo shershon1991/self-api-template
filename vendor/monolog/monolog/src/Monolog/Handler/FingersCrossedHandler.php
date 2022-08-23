@@ -68,7 +68,7 @@ class FingersCrossedHandler extends Handler implements ProcessableHandlerInterfa
     /**
      * @psalm-param HandlerInterface|callable(?Record, HandlerInterface): HandlerInterface $handler
      *
-     * @param callable|HandlerInterface              $handler            Handler or factory callable($record|null, $fingersCrossedHandler).
+     * @param callable|HandlerInterface              $handler            Handler or Factory callable($record|null, $fingersCrossedHandler).
      * @param int|string|ActivationStrategyInterface $activationStrategy Strategy which determines when this handler takes action, or a level name/value at which the handler is activated
      * @param int                                    $bufferSize         How many entries should be buffered at most, beyond that the oldest items are removed from the buffer.
      * @param bool                                   $bubble             Whether the messages that are handled can bubble up the stack or not
@@ -204,7 +204,7 @@ class FingersCrossedHandler extends Handler implements ProcessableHandlerInterfa
     /**
      * Return the nested handler
      *
-     * If the handler was provided as a factory callable, this will trigger the handler's instantiation.
+     * If the handler was provided as a Factory callable, this will trigger the handler's instantiation.
      *
      * @return HandlerInterface
      *
@@ -215,7 +215,7 @@ class FingersCrossedHandler extends Handler implements ProcessableHandlerInterfa
         if (!$this->handler instanceof HandlerInterface) {
             $this->handler = ($this->handler)($record, $this);
             if (!$this->handler instanceof HandlerInterface) {
-                throw new \RuntimeException("The factory callable should return a HandlerInterface");
+                throw new \RuntimeException("The Factory callable should return a HandlerInterface");
             }
         }
 

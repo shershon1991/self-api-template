@@ -99,7 +99,7 @@ final class PhptTestCase implements SelfDescribing, Test
     }
 
     /**
-     * Counts the number of test cases executed by run(TestResult result).
+     * Counts the number of test Cases executed by run(TestResult result).
      */
     public function count(): int
     {

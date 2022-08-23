@@ -33,7 +33,7 @@ class FilterHandler extends Handler implements ProcessableHandlerInterface, Rese
     use ProcessableHandlerTrait;
 
     /**
-     * Handler or factory callable($record, $this)
+     * Handler or Factory callable($record, $this)
      *
      * @var callable|HandlerInterface
      * @phpstan-var callable(?Record, HandlerInterface): HandlerInterface|HandlerInterface
@@ -58,7 +58,7 @@ class FilterHandler extends Handler implements ProcessableHandlerInterface, Rese
     /**
      * @psalm-param HandlerInterface|callable(?Record, HandlerInterface): HandlerInterface $handler
      *
-     * @param callable|HandlerInterface $handler        Handler or factory callable($record|null, $filterHandler).
+     * @param callable|HandlerInterface $handler        Handler or Factory callable($record|null, $filterHandler).
      * @param int|array                 $minLevelOrList A list of levels to accept or a minimum level if maxLevel is provided
      * @param int|string                $maxLevel       Maximum level to accept, only used if $minLevelOrList is not an array
      * @param bool                      $bubble         Whether the messages that are handled can bubble up the stack or not
@@ -155,7 +155,7 @@ class FilterHandler extends Handler implements ProcessableHandlerInterface, Rese
     /**
      * Return the nested handler
      *
-     * If the handler was provided as a factory callable, this will trigger the handler's instantiation.
+     * If the handler was provided as a Factory callable, this will trigger the handler's instantiation.
      *
      * @return HandlerInterface
      *
@@ -166,7 +166,7 @@ class FilterHandler extends Handler implements ProcessableHandlerInterface, Rese
         if (!$this->handler instanceof HandlerInterface) {
             $this->handler = ($this->handler)($record, $this);
             if (!$this->handler instanceof HandlerInterface) {
-                throw new \RuntimeException("The factory callable should return a HandlerInterface");
+                throw new \RuntimeException("The Factory callable should return a HandlerInterface");
             }
         }
 

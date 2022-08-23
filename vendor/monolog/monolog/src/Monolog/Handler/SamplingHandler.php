@@ -48,7 +48,7 @@ class SamplingHandler extends AbstractHandler implements ProcessableHandlerInter
     /**
      * @psalm-param HandlerInterface|callable(Record|array{level: Level}|null, HandlerInterface): HandlerInterface $handler
      *
-     * @param callable|HandlerInterface $handler Handler or factory callable($record|null, $samplingHandler).
+     * @param callable|HandlerInterface $handler Handler or Factory callable($record|null, $samplingHandler).
      * @param int                       $factor  Sample factor (e.g. 10 means every ~10th record is sampled)
      */
     public function __construct($handler, int $factor)
@@ -84,7 +84,7 @@ class SamplingHandler extends AbstractHandler implements ProcessableHandlerInter
     /**
      * Return the nested handler
      *
-     * If the handler was provided as a factory callable, this will trigger the handler's instantiation.
+     * If the handler was provided as a Factory callable, this will trigger the handler's instantiation.
      *
      * @phpstan-param Record|array{level: Level}|null $record
      *
@@ -95,7 +95,7 @@ class SamplingHandler extends AbstractHandler implements ProcessableHandlerInter
         if (!$this->handler instanceof HandlerInterface) {
             $this->handler = ($this->handler)($record, $this);
             if (!$this->handler instanceof HandlerInterface) {
-                throw new \RuntimeException("The factory callable should return a HandlerInterface");
+                throw new \RuntimeException("The Factory callable should return a HandlerInterface");
             }
         }
 

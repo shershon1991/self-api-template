@@ -17,7 +17,7 @@ use Monolog\Formatter\FormatterInterface;
 /**
  * Handler to only pass log messages when a certain threshold of number of messages is reached.
  *
- * This can be useful in cases of processing a batch of data, but you're for example only interested
+ * This can be useful in Cases of processing a batch of data, but you're for example only interested
  * in case it fails catastrophically instead of a warning for 1 or 2 events. Worse things can happen, right?
  *
  * Usage example:

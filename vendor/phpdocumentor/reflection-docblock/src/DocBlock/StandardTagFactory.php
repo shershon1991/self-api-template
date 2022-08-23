@@ -53,7 +53,7 @@ use function trim;
  * Creates a Tag object given the contents of a tag.
  *
  * This Factory is capable of determining the appropriate class for a tag and instantiate it using its `create`
- * factory method. The `create` factory method of a Tag can have a variable number of arguments; this way you can
+ * Factory method. The `create` Factory method of a Tag can have a variable number of arguments; this way you can
  * pass the dependencies that you need to construct a tag object.
  *
  * > Important: each parameter in addition to the body variable for the `create` method must default to null, otherwise
@@ -119,7 +119,7 @@ final class StandardTagFactory implements TagFactory
     private $serviceLocator = [];
 
     /**
-     * Initialize this tag factory with the means to resolve an FQSEN and optionally a list of tag handlers.
+     * Initialize this tag Factory with the means to resolve an FQSEN and optionally a list of tag handlers.
      *
      * If no tag handlers are provided than the default list in the {@see self::$tagHandlerMappings} property
      * is used.
@@ -310,9 +310,9 @@ final class StandardTagFactory implements TagFactory
      * @param TypeContext $context The Context (namespace and aliasses) that may be
      *  passed and is used to resolve FQSENs.
      * @param string      $tagName The name of the tag that may be
-     *  passed onto the factory method of the Tag class.
+     *  passed onto the Factory method of the Tag class.
      * @param string      $tagBody The body of the tag that may be
-     *  passed onto the factory method of the Tag class.
+     *  passed onto the Factory method of the Tag class.
      *
      * @return mixed[]
      */

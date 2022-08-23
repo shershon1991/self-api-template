@@ -42,7 +42,7 @@ class Factory
     }
 
     /**
-     * Constructs a new factory.
+     * Constructs a new Factory.
      */
     public function __construct()
     {

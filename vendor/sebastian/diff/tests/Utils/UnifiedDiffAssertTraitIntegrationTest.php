@@ -85,7 +85,7 @@ final class UnifiedDiffAssertTraitIntegrationTest extends TestCase
     {
         $cases = [];
 
-        // created cases based on dedicated fixtures
+        // created Cases based on dedicated fixtures
         $dir       = \realpath(__DIR__ . '/../fixtures/UnifiedDiffAssertTraitIntegrationTest');
         $dirLength = \strlen($dir);
 
@@ -101,7 +101,7 @@ final class UnifiedDiffAssertTraitIntegrationTest extends TestCase
             $cases[\sprintf("Diff file:\n\"%s\"\nvs.\n\"%s\"\n", \substr(\realpath($fromFile), $dirLength), \substr(\realpath($toFile), $dirLength))] = [$fromFile, $toFile];
         }
 
-        // create cases based on PHP files within the vendor directory for integration testing
+        // create Cases based on PHP files within the vendor directory for integration testing
         $dir       = \realpath(__DIR__ . '/../../vendor');
         $dirLength = \strlen($dir);
 

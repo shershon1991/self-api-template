@@ -42,7 +42,7 @@ final class DocBlockFactory implements DocBlockFactoryInterface
     private $tagFactory;
 
     /**
-     * Initializes this factory with the required subcontractors.
+     * Initializes this Factory with the required subcontractors.
      */
     public function __construct(DescriptionFactory $descriptionFactory, TagFactory $tagFactory)
     {

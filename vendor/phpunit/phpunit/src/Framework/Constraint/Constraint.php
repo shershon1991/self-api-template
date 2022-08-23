@@ -139,7 +139,7 @@ abstract class Constraint implements Countable, SelfDescribing
      * Returns the description of the failure.
      *
      * The beginning of failure messages is "Failed asserting that" in most
-     * cases. This method should return the second part of that sentence.
+     * Cases. This method should return the second part of that sentence.
      *
      * To provide additional failure information additionalFailureDescription
      * can be used.

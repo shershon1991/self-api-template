@@ -14,7 +14,7 @@ namespace Monolog\Handler;
 /**
  * Base Handler class providing the Handler structure, including processors and formatters
  *
- * Classes extending it should (in most cases) only implement write($record)
+ * Classes extending it should (in most Cases) only implement write($record)
  *
  * @author Jordi Boggiano <j.boggiano@seld.be>
  * @author Christophe Coevoet <stof@notk.org>
