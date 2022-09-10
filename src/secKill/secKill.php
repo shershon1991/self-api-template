@@ -13,7 +13,7 @@ for ($i = 0; $i < 100; $i++) {
     $uid    = rand(10000, 99999);
     $mobile = '13608313311';
     $num    = 10;
-    // todo::
+    // todo
     // 1）将lLen和rPush两个操作放到lua脚本中，保证原子性
     // 2）将lLen和rPush两个操作放到事务中，保证原子性
     if ($redis->lLen($redis_name) < $num) {
