@@ -6,7 +6,7 @@ $bgcolor = imagecolorallocate($image, 255, 255, 255);
 imagefill($image, 0, 0, $bgcolor);
 
 //创建汉字验证码
-$fontface = __DIR__ . '/msyhbd.ttf';
+$fontface = __DIR__ . '/../../assets/font/msyhbd.ttf';
 $str      = "你要加油你是最棒的努力成为自己心目中的那个人";
 $strdb    = str_split($str, 3);
 
@@ -20,7 +20,6 @@ for ($i = 0; $i < 4; $i++) {
 
     imagettftext($image, mt_rand(20, 24), mt_rand(-60, 60), (40 * $i + 20), mt_rand(30, 35), $fontcolor, $fontface, $cn);
 }
-$_SESSION['authcode'] = $captch_code;
 
 //增加干扰点
 for ($i = 0; $i < 200; $i++) {
@@ -33,6 +32,9 @@ for ($i = 0; $i < 3; $i++) {
     $linecolor = imagecolorallocate($image, rand(80, 220), rand(80, 220), rand(80, 220));
     imageline($image, rand(1, 199), rand(1, 59), rand(1, 199), rand(1, 59), $linecolor);
 }
+
+// 保存到session，以便提交表单时进行验证
+$_SESSION['authcode'] = $captch_code;
 
 header('content-type:image/png');
 imagepng($image);

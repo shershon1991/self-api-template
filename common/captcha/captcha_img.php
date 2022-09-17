@@ -14,7 +14,7 @@ $index                = rand(0, 4);
 $value                = $table['pic' . $index];
 $_SESSION['authcode'] = $value;
 
-$filename = __DIR__ . '/pic' . $index . '.jpg';
+$filename = __DIR__ . '/../../assets/img/pic' . $index . '.jpg';
 $contents = file_get_contents($filename);
 
 header('content-type:image/jpeg');

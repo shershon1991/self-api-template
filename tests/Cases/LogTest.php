@@ -10,8 +10,8 @@ class LogTest extends AbstractTestCase
 {
     public function testLog()
     {
-        $log = new Logger('name');
-        $logPath = '/Users/shershon/ProjectItem/PhpItem/php-study-example/logs/' . date('Y-m-d') . '.log';
+        $log     = new Logger('name');
+        $logPath = '/Users/shershon/ProjectItem/PhpItem/php-topic/runtime/logs/' . date('Y-m-d') . '.log';
         $log->pushHandler(new StreamHandler($logPath, Logger::WARNING));
 
         $log->warning('This is a warning record.');

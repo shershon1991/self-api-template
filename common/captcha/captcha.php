@@ -31,7 +31,6 @@ for ($i = 0; $i < 4; $i++) {
     $y = rand(5, 10);
     imagestring($image, $fontsize, $x, $y, $fontcontent, $fontcolor);
 }
-$_SESSION['authcode'] = $captch_code;
 
 //增加干扰点
 for ($i = 0; $i < 200; $i++) {
@@ -45,8 +44,13 @@ for ($i = 0; $i < 3; $i++) {
     imageline($image, rand(1, 99), rand(1, 29), rand(1, 99), rand(1, 29), $linecolor);
 }
 
+// 保存到session，以便提交表单时进行验证
+$_SESSION['authcode'] = $captch_code;
+
+// 输出到浏览器
 header('content-type:image/png');
 imagepng($image);
 
-//imagepng($image, __DIR__ . '/captcha.png');
+// 保存至图片
+//imagepng($image, __DIR__ . '/img/captcha.png');
 //imagedestroy($image);
