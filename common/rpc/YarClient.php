@@ -9,7 +9,7 @@ class YarClient
 
     public function __construct()
     {
-        $this->_client = new \Yar_Client("http://localhost:8080/index.php?c=yar&a=server");
+        $this->_client = new \Yar_Client("http://47.108.49.196/:8080/index.php?c=yar&a=server");
     }
 
     /**
@@ -32,13 +32,18 @@ class YarClient
      */
     public function concurrentCall()
     {
-        Yar_Concurrent_Client::call("http://localhost:8080/index.php?c=yar&a=server", "some_method", ["parameters"], ['YarClient', 'callback']);
-        Yar_Concurrent_Client::call("http://localhost:8080/index.php?c=yar&a=server", "some_method", ["parameters"]); // if the callback is not specificed,callback in loop will be used
+        Yar_Concurrent_Client::call("http://47.108.49.196/:8080/index.php?c=yar&a=server", "some_method", ["parameters"], ['YarClient', 'callback']);
+        Yar_Concurrent_Client::call("http://47.108.49.196/:8080/index.php?c=yar&a=server", "some_method", ["parameters"]); // if the callback is not specificed,callback in loop will be used
         Yar_Concurrent_Client::call("http://127.0.0.1:8081/src/rpc/yar_server.php", "some_method", ["parameters"], ['YarClient', 'callback'], ['YarClient', 'error_callback'], [YAR_OPT_PACKAGER => "json"]);  //this server accept json packager
-        Yar_Concurrent_Client::call("http://localhost:8080/index.php?c=yar&a=server", "some_method", ["parameters"], ['YarClient', 'callback'], ['YarClient', 'error_callback'], [YAR_OPT_TIMEOUT => 1]);  //custom timeout
+        Yar_Concurrent_Client::call("http://47.108.49.196/:8080/index.php?c=yar&a=server", "some_method", ["parameters"], ['YarClient', 'callback'], ['YarClient', 'error_callback'], [YAR_OPT_TIMEOUT => 1]);  //custom timeout
         Yar_Concurrent_Client::loop(['YarClient', 'callback'], ['YarClient', 'error_callback']);
     }
 
+    /**
+     * 持久通话
+     *
+     * @return void
+     */
     public function persistentCall()
     {
         $this->_client->SetOpt(YAR_OPT_PERSISTENT, 1);
