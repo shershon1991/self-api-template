@@ -1,7 +1,9 @@
 <?php
 
+namespace common\rpc;
+
 // 服务器端example
-class API
+class YarServer
 {
     /**
      * the doc info will be generated automatically into service info page.
@@ -34,6 +36,3 @@ class API
     {
     }
 }
-
-$server = new Yar_Server(new API());
-$server->handle();

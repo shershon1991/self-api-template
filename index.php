@@ -23,5 +23,5 @@ spl_autoload_register(function ($className) {
     }
 });
 
-$obj = new \controllers\CaptchaController();
-$obj->$action();
+$dynCOntroller = "\\controllers\\" . $controller;
+(new $dynCOntroller())->$action();
