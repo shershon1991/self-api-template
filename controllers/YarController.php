@@ -24,12 +24,12 @@ class YarController
     // 并发调用
     public function concurrent_call()
     {
-        (new YarClient())->syncCall();
+        (new YarClient())->concurrentCall();
     }
 
     // 持久通话
     public function persistent_call()
     {
-        (new YarClient())->syncCall();
+        (new YarClient())->persistentCall();
     }
 }
