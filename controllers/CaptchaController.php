@@ -13,7 +13,7 @@ class CaptchaController
         (new Captcha(100, 30))->createNumber();
     }
 
-    // 创建数字验证码
+    //创建数字、字母验证码
     public function create_number_letter()
     {
         (new Captcha(100, 30))->createNumberAndLetter();

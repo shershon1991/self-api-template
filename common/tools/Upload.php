@@ -1,7 +1,7 @@
 <?php
 
 /**
- *  TODO:文件上传类
+ *  desc:文件上传类
  *  Author:Shershon
  *  time:2017-10-28
  *  version:1.0

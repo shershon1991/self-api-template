@@ -1,6 +1,6 @@
 <?php
 /**
- *  todo:图片处理类
+ *  desc:图片处理类
  *  Author:Shershon
  *  time:2017-10-27
  *  version:1.0
@@ -12,7 +12,7 @@ class Image
     private $info;//图片的基本信息
 
     /**
-     * todo:打开一张图片，读取到内存中
+     * desc:打开一张图片，读取到内存中
      * @param string src 图片路径
      */
     public function getSize($src)
@@ -22,7 +22,7 @@ class Image
     }
 
     /**
-     * todo:打开一张图片，读取到内存中
+     * desc:打开一张图片，读取到内存中
      * @param string src 图片路径
      */
     public function __construct($src)
@@ -39,7 +39,7 @@ class Image
     }
 
     /**
-     * todo:操作图片（压缩）
+     * desc:操作图片（压缩）
      * @param int width 图片宽度
      * @param int height 图片高度
      */
@@ -52,7 +52,7 @@ class Image
     }
 
     /**
-     * todo:操作图片（自动旋转）
+     * desc:操作图片（自动旋转）
      * @param string src 图片路径
      */
     public function rotate($src, $exif)
@@ -78,7 +78,7 @@ class Image
     }
 
     /**
-     * todo:操作图片（添加文字水印）
+     * desc:操作图片（添加文字水印）
      * @param string content 文字内容
      * @param string font_url 字体路径
      * @param int size 字体大小
@@ -93,7 +93,7 @@ class Image
     }
 
     /**
-     * todo:操作图片（添加图片水印）
+     * desc:操作图片（添加图片水印）
      * @param string water水印图片路径
      * @param array local_image水印图片相对原始图片位置
      * @param string filename原始图片路径
@@ -122,7 +122,7 @@ class Image
     }
 
     /**
-     * todo:在浏览器中输出图片
+     * desc:在浏览器中输出图片
      */
     public function show()
     {
@@ -132,7 +132,7 @@ class Image
     }
 
     /**
-     * todo:把图片保存到硬盘中
+     * desc:把图片保存到硬盘中
      * @param string newName 生成的图片名
      */
     public function save($newName, $dir)
@@ -142,7 +142,7 @@ class Image
     }
 
     /**
-     * todo:销毁图片
+     * desc:销毁图片
      */
     public function __destroy()
     {
@@ -150,7 +150,7 @@ class Image
     }
 
     /**
-     * todo:检查路径是否存在，不存在则创建
+     * desc:检查路径是否存在，不存在则创建
      * @param string path 待检查的目录
      * return string 返回创建后的目录
      */
