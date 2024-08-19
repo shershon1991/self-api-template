@@ -13,7 +13,7 @@ echo $b;*/
 header('Access-Control-Allow-Origin:*');
 header("Content-Type:text/html;charset=utf-8");
 
-$controller = ucfirst(strtolower($_GET['c'] ?? "Index")) . 'Controller';
+$controller = ucfirst(strtolower($_GET['c'] ?? "Test")) . 'Controller';
 $action     = strtolower($_GET['a'] ?? "index");
 
 spl_autoload_register(function ($className) {
