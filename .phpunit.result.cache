@@ -1,1 +1,1 @@
-{"version":1,"defects":{"Self\\Test\\Cases\\LogTest::testLog":5},"times":{"Self\\Test\\Cases\\LogTest::testLog":0.023}}
+C:37:"PHPUnit\Runner\DefaultTestResultCache":135:{a:2:{s:7:"defects";a:1:{s:32:"Self\Test\Cases\LogTest::testLog";i:5;}s:5:"times";a:1:{s:32:"Self\Test\Cases\LogTest::testLog";d:0.03;}}}

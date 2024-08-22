@@ -11,7 +11,7 @@ class LogController
     public function log()
     {
         $log     = new Logger('name');
-        $logPath = '/Users/shershon/ProjectItem/PhpItem/self-api-template/runtime/logs/' . date('Y-m-d') . '.log';
+        $logPath = './runtime/logs/' . date('Y-m-d') . '.log';
         $log->pushHandler(new StreamHandler($logPath, Logger::WARNING));
 
         $log->warning('This is a warning record.');
