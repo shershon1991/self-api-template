@@ -1,14 +1,14 @@
 <?php
 
-
-namespace Self\Test\Cases;
+namespace controllers;
 
 use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
 
-class LogTest extends AbstractTestCase
+class LogController
 {
-    public function testLog()
+
+    public function log()
     {
         $log     = new Logger('name');
         $logPath = '/Users/shershon/ProjectItem/PhpItem/self-api-template/runtime/logs/' . date('Y-m-d') . '.log';
